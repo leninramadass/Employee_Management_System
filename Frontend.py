@@ -204,6 +204,30 @@ def update_employee():
     show_page(1)
     global selected_row
     selected_row = None
+    
+    update_submit_button.destroy()
+    cancel_button.destroy()
+
+    clear_button = CTkButton(master=page1,
+                             command=clear_all,
+                             text="Clear",
+                             font=("calibri", 18),
+                             text_color="white",
+                             width=120,
+                             height=40,
+                             corner_radius=6)
+    clear_button.place(x=1020, y=650)
+    submit_button = CTkButton(master=page1,
+                              command=add_employee,
+                              text="Submit",
+                              font=("calibri", 18),
+                              text_color="white",
+                              width=120,
+                              height=40,
+                              corner_radius=6,
+                              fg_color="#359f07",
+                              hover_color="#2e7e0c")
+    submit_button.place(x=1160, y=650)
 
 
 # Function to cancel the update and go back to the main page
